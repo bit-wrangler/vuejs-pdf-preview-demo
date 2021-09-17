@@ -30,14 +30,14 @@ export default {
   width: 40vw;
   /*height: 50vh;*/
   background: dimgray;
-  font-size: 0.75vw;
+  font-size: 0.73vw;
 }
 
 @media print {
   .document-viewer-container {
     aspect-ratio: unset;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
     overflow-x: unset;
     overflow-y: unset;
     width: unset;
@@ -53,8 +53,8 @@ export default {
 
 @media only screen and (max-width: 600px) {
   .document-viewer-container {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
     overflow-x: unset;
     overflow-y: unset;
     width: unset;

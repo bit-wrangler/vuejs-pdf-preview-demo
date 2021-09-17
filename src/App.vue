@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="btn btn-primary" id="download-pdf-button" @click="downloadPdf()">Download PDF</div>
+    <div class="btn btn-primary" id="download-pdf-button" @click="downloadPdf()">Print PDF</div>
     <div>
       <DocumentViewer :data="doc"/>
     </div>
@@ -9,7 +9,6 @@
 
 <script>
 import "bootstrap/dist/css/bootstrap.min.css";
-import { jsPDF } from 'jspdf';
 import {DocumentPageFooterData} from "./models/DocumentPageFooterData";
 import {DocumentPageHeaderData} from "./models/DocumentPageHeaderData";
 import {DocumentParagraphData} from "./models/DocumentParagraphData";
@@ -46,10 +45,7 @@ export default {
   },
   methods: {
     downloadPdf() {
-      const pdf = new jsPDF("portrait","in",'es');
-      pdf.html(document.documentElement, {}).then((pdf) => {
-        console.log(pdf);
-      })
+      window.print();
     }
   }
 };
@@ -67,7 +63,7 @@ export default {
 
 @media print {
   #app {
-    margin-top: 0px;
+    margin-top: 0;
   }
 
   #download-pdf-button {

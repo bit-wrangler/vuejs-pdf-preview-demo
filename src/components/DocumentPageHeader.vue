@@ -25,7 +25,7 @@ export default {
 
 <style scoped>
 .document-page-header-container {
-  margin-bottom: 2rem;
+  margin-bottom: 2em;
 }
 
 .document-page-header-image {
