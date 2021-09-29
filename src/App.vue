@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="btn btn-primary" id="download-pdf-button" @click="downloadPdf()">Print PDF</div>
+    <div class="btn btn-primary m-1" id="download-pdf-button" @click="downloadPdf()">Print PDF</div>
     <div>
       <DocumentViewer :data="doc"/>
     </div>
